@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body{
+    position: relative;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+div, button {
+    font-family: "Chakra Petch", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 4rem;
+}
+
+button {
+    border-style: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    line-height: 4rem;
+}
+
+div.wrapper {
+    /* center */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+        width: 70%;
+
+    /* flex container */
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+
+div.wrapper button {
+    flex-basis: 49%;
+    padding: .4rem;
+    border: .2rem dashed #000;
+    border-radius: 1rem;
+    transition: .2s;
+    cursor: pointer;
+
+}
+
+div.wrapper button.increase {
+    margin-right: 1%;
+}
+
+div.wrapper button.decrease {
+    margin-left: 1%;
+}
+
+div.result {
+    text-align: center;
+    flex-grow: 1;
+    margin-top: 1rem;
+    /* flex-shrink: 1; */
+}
+
+div.wrapper button:hover{
+    color: #fff;
+    background-color: #000;
+    border-color: #fff;
+    box-shadow: 0 0 0 .1rem #000;
+}
+
+/* mobile */
+@media (max-width: 740px){
+    div.wrapper button{
+        margin: 0;
+        
+        flex-basis: 100%;
+    }
+
+    div.wrapper button.increase {
+        margin-bottom: 2%;
+    }
+    
+}
